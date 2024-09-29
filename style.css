@@ -1,0 +1,249 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #87CEEB;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.center-content h1 {
+    font-size: 4rem;
+    color: #F4E06D;
+    margin: 0;
+    font-family: "Schoolbell", cursive;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.center-content h2 {
+    font-size: 2rem;
+    color: #F4E06D;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1s forwards;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul li a:hover {
+    color: #F4E06D;
+    /* Softer Yellow hover effect */
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #87CEEB;
+    /* Muted Blue for section titles */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 80px;
+}
+
+#about-me {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+
+}
+
+
+#about-me p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#about-me.active p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#projects {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.projects-grid.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card {
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 300px;
+    /* Set a maximum width for consistency */
+    height: 200px;
+    /* Fixed height to make all images uniform */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.projects-grid .project-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.project-card a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    color: #F4E06D;
+    /* Hover effect for project title */
+}
+
+
+#contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+#contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+
+}
+
+#contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #87CEEB;
+    font-size: 55px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #F4E06D;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #87CEEB;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.schoolbell-regular {
+    font-family: "Schoolbell", cursive;
+    font-weight: 400;
+    font-style: normal;
+}

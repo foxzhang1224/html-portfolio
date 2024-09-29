@@ -1,45 +1,114 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
 <!DOCTYPE html>
-<html lan="en">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fox's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+  <section class="intro">
+    <div class="center-content">
+      <h1>FOX ZHANG</h1>
+      <h2>Hey! I am a Web Developer and Software Engineer :)</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a ref="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="./Capstone Project 1/index.html">Resume</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </nav>
+  </section>
 
-  <h1>Hi, This is Fox:)</h1>
-  <h2>I'm a Web Developer</h2>
-  <h3>This is my <a href="./Capstone Project 1/index.html">Resume</a></h3>
-  <img src="./assets/images/me.png" height="200" alt="Me" />
-  <hr />
-  <h3><a href="./Dice Challenge/index.html">Dice Challenge</a></h3>
-  <img src="./Dice Challenge/Dice.png" height="200" alt="Dice" />
-  <h3><a href="./6.4 Motivation Meme Project/index.html">Motivation Meme Project</h3>
-  <img src="./6.4 Motivation Meme Project/ts.jpeg" height="200" alt="Everything will be alright" />
-  <h3><a href="./public/movie-ranking.html">Movie Ranking Project</a></h3>
+  <section id="about-me">
+    <h2>About Me</h2>
+    <p>Hey there:) My name is Fox and I'm from Vancouver, Canada. I'm currently a senior at New York University
+      studying Computer Science and Economics with a minor in Business of Entertainment, Media, and
+      Technology.</p>
 
+    <p>Welcome to my personal website! Here, you’ll find the projects I’ve worked on in web design and computer
+      engineering. I’ve had hands-on experience with a variety of programming languages and tools, including Python,
+      Java, C, C++, SQL, R, JavaScript, HTML, and CSS. I hope you enjoy exploring my work!</p>
 
-  <img src="./assets/images/Movie.png" height="200" alt="My favourite films" />
+    <p>And when I’m not deep into code, I’m a passionate Swiftie and my favourite era is Red! 🎶</p>
 
-  <h3><a href="./public/birthday-invite.html">Birthday Invite Project</a>
-  </h3>
+  </section>
 
-  <img src="./assets/images/birthday-invite.png" height="200" alt="Birthday Invite" />
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3><a href="./Dice Challenge/index.html">Dice Challenge</a></h3>
+        <img src="./Dice Challenge/Dice.png" alt="Dice" />
+      </div>
+      <div class="project-card">
+        <h3><a href="./6.4 Motivation Meme Project/index.html">Motivation Meme Project</a></h3>
+        <img src="./6.4 Motivation Meme Project/ts.jpeg" alt="Motivation Meme Project" />
+      </div>
+    </div>
+  </section>
 
-  <hr />
-  <a href="./public/about.html">About Me</a> |
-  <a href="./public/contact.html">Contact</a>
+  <!-- Skills Section 
+  <section id="skills">
+    <h2>Skills</h2>
+  </section>
+  -->
 
+  <section id="contact-section">
+    <h2>Contact Me</h2>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/foxzhang1224" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/fei-zhang-5705a2197/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:fz2097@nyu.edu" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/foxzhang1224" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const aboutMeSection = document.querySelector('#about-me');
+      const projectSection = document.querySelector('.projects-grid');
 
-  <footer>
-    <small>
-      Copyright © 2024 Fei Zhang. All Rights Reserved.
-    </small>
-  </footer>
-
+      function onScroll() {
+        const aboutMeTop = aboutMeSection.getBoundingClientRect().top;
+        const projectTop = projectSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (aboutMeTop < windowHeight - 100) {
+          aboutMeSection.classList.add('active');
+        }
+        if (projectTop < windowHeight - 100) {
+          projectSection.classList.add('active');
+        }
+      }
+      window.addEventListener('scroll', onScroll);
+    });
+  </script>
 </body>
+
+<footer>
+  <p>&copy; 2024 Zhang Fei. All rights reserved.</p>
+</footer>
 
 </html>
